@@ -2,6 +2,10 @@
 
 Este repositorio contiene un programa en C++ que ordena alfabéticamente un archivo de texto con palabras, algunas de las cuales pueden estar repetidas. El resultado se guarda en otro archivo de texto con las palabras ordenadas junto con sus repeticiones.
 
+### Autores:
+- **Bottini, Franco Nicolas**
+- **Robledo, Valentin**
+
 ## Desarrollo
 
 ### Clases Implementadas
