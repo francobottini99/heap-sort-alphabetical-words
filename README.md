@@ -1,45 +1,45 @@
-# Ordenador Alfabético de Palabras
+# Alphabetical Word Sorter
 
-Este repositorio contiene un programa en C++ que ordena alfabéticamente un archivo de texto con palabras, algunas de las cuales pueden estar repetidas. El resultado se guarda en otro archivo de texto con las palabras ordenadas junto con sus repeticiones.
+This repository contains a C++ program that alphabetically sorts a text file containing words, some of which may be repeated. The result is saved in another text file, listing the sorted words along with their frequency counts.
 
-### Autores:
-- **Bottini, Franco Nicolas**
-- **Robledo, Valentin**
+### Authors:
+- **Franco Nicolas Bottini**
+- **Valentin Robledo**
 
-## Desarrollo
+## Development
 
-### Clases Implementadas
+### Implemented Classes
 
-1. **`Tree`**: Clase que genera un árbol n-ario semicompleto donde cada palabra se representa en un nodo, y las repeticiones se cuentan en el mismo nodo.
+1. **`Tree`**: A class that creates a semi-complete n-ary tree, where each word is represented by a node, and repeated words are counted within the same node.
 
-2. **`Heap`**: Clase que utiliza la clase `Tree` como base para implementar un heap binario. Los elementos se ordenan de manera que un nodo padre siempre sea mayor que todos sus nodos hijos. Incluye el método `sort` para ordenar las instancias del heap.
+2. **`Heap`**: A class that uses the `Tree` class as a foundation to implement a binary heap. Elements are arranged so that a parent node is always greater than all its child nodes. This class includes a `sort` method to sort the heap instances.
 
-### Función Principal (`main`)
+### Main Function (`main`)
 
-1. Lee el archivo "Input.txt" y procesa las palabras.
-2. Reemplaza las vocales acentuadas por sus equivalentes sin acentuación, la letra "ñ" por la "n", y elimina caracteres como ",", ".", "()", "¿?", entre otros.
-3. Inserta las palabras en una instancia de la clase `Heap`.
-4. Ordena el heap utilizando el método `sort`.
-5. Genera el archivo "Output.txt" con la lista de palabras ordenadas alfabéticamente, sus repeticiones y el número de comparaciones realizadas.
+1. Reads the file "Input.txt" and processes the words.
+2. Replaces accented vowels with their unaccented equivalents, converts the letter "ñ" to "n," and removes characters such as ",", ".", "()", "¿?", among others.
+3. Inserts the words into an instance of the `Heap` class.
+4. Sorts the heap using the `sort` method.
+5. Generates the "Output.txt" file, which contains the alphabetically sorted list of words, their frequencies, and the number of comparisons performed.
 
-## Análisis de Complejidad
+## Complexity Analysis
 
-Realizando pruebas con un heap binario, se confirmó que la complejidad del algoritmo es del orden de 𝑂(𝑛log(𝑛)), donde 𝑛 es el número de palabras.
+Tests confirmed that, using a binary heap, the algorithm's complexity is of the order 𝑂(𝑛log(𝑛)), where 𝑛 is the number of words.
 
-### Resultados
+### Results
 
-Se realizaron pruebas variando el número de palabras y obteniendo el siguiente resultado:
+Tests were conducted by varying the number of words, yielding the following results:
 
-| Palabras | n Log(n) | Resultado |
-|----------|----------|-----------|
-| 333      | 2790     | 3979      |
-| 5581     | 1535     | 16246     |
-| 24978    | 32493    | 6269      |
-| 79077    | 127366   | 158155    |
-| 6860     | 87424    | 141112    |
-| 174848   | 9917     | 131655    |
-| 223459   | 263310   | 19781     |
-| 564622   | 29699    | 441272    |
-| 761194   | 882543   | 39707     |
-| 1053909  | 1213216  | 79356     |
-| 2234880  | 2583205  |           |
+| Words   | n Log(n) | Result    |
+|---------|----------|-----------|
+| 333     | 2790     | 3979      |
+| 5581    | 1535     | 16246     |
+| 24978   | 32493    | 6269      |
+| 79077   | 127366   | 158155    |
+| 6860    | 87424    | 141112    |
+| 174848  | 9917     | 131655    |
+| 223459  | 263310   | 19781     |
+| 564622  | 29699    | 441272    |
+| 761194  | 882543   | 39707     |
+| 1053909 | 1213216  | 79356     |
+| 2234880 | 2583205  |           |
